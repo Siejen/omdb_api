@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Details</title>
+  </head>
+  <body>
+  <h1>Movie Details</h1>
+  <%= JSON.stringify(stuff) %>
+  <%= stuff["Title"] %> <br/>
+  <%= stuff["imdbID"] %> <br/>
+  <%= stuff["Year"] %> <br/>
+  <%= stuff["Actors"] %> <br/>
+      <img src="<%= stuff["Poster"] %>"> <br/>
+    <form method="post" action="/store">
+      <input type="hidden" name="movie" value="<%= stuff["Title"] %>">
+      <button>Add to My Favorites</button>
+    </form>
+  </body>
+</html>
+
+
