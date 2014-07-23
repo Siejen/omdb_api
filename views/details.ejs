@@ -13,6 +13,7 @@
       <img src="<%= stuff["Poster"] %>"> <br/>
     <form method="post" action="/store">
       <input type="hidden" name="movie" value="<%= stuff["Title"] %>">
+      <input type="hidden" name="link" value="/details?imdbID=<%= stuff["imdbID"] %>">
       <button>Add to My Favorites</button>
     </form>
   </body>

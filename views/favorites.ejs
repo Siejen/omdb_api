@@ -8,7 +8,7 @@
 	<ul>
 	  	<% favList.forEach(function (movie) { %>
 	    <li>
-	    	<%= movie %>
+	    	<a href="<%=movie.link %>"> <%= movie.movie %> </a>
 	    </li>
 	  	<% }) %>
   	</ul>

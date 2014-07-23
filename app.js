@@ -8,6 +8,8 @@ var favoritesArray = [];
 
 app.use(bodyParser.urlencoded());
 
+debugger;
+
 app.get('/', function(req, res){
   res.render('index.ejs');
 });
@@ -42,7 +44,9 @@ app.get('/favorites', function(req, res){
 
 app.post('/store', function(req, res){
 	console.log(req.body.movie);
-	favoritesArray.push(req.body.movie);
+	console.log(req.body.link);
+	var fav = { movie : req.body.movie , link : req.body.link };	
+	favoritesArray.push(fav);
 	res.redirect('/favorites');
 });
 
